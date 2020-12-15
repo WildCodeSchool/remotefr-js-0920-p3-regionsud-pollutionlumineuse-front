@@ -8,10 +8,10 @@ import {
   Game,
   Practical,
   Ressource,
-} from '../pages';
+} from './pages';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
