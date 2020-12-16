@@ -52,7 +52,13 @@ class Header extends React.Component {
                 &#xe001;
               </span>
             </li>
+            <li>
+              <span role="img" aria-label="who you are?" />
+            </li>
           </ul>
+          <div className="title">
+            <h1>La Pollution Lumineuse</h1>
+          </div>
         </div>
       </nav>
     );
