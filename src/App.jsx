@@ -16,8 +16,8 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/mot-message-cle" component={Essential} />
@@ -26,8 +26,9 @@ function App() {
           <Route path="/jeu" component={Game} />
           <Route path="/ressource" component={Ressource} />
         </Switch>
+
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
