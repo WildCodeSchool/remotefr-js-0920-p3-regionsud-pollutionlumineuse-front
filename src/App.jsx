@@ -26,8 +26,9 @@ function App() {
           <Route path="/jeu" component={Game} />
           <Route path="/ressource" component={Ressource} />
         </Switch>
+
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
