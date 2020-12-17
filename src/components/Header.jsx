@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import { Link, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   constructor(props) {
@@ -17,22 +17,45 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <img src="" className="logoRegionSud" alt="logo region sud" />
+        <img
+          src="https://www.pnr-queyras.fr/ecmedias/2020/05/tampon-PNR-PACA.jpg"
+          className="logoRegionSud"
+          alt="logo region sud"
+        />
         <h1>La Poluttion Lumineuse</h1>
-        <Router>
-          <ul>
-            <li>
-              <Link className="nav-homepage" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-definitions" to="/mot-message-cle">
-                Essential
-              </Link>
-            </li>
-          </ul>
-        </Router>
+
+        <ul>
+          <li>
+            <Link className="nav-homepage" to="/">
+              Homepage
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-message-cle" to="/mot-message-cle">
+              Messages-cles
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-definitions" to="/definition">
+              Definitions
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-pratique" to="/pratique">
+              Passons à la pratique
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-jeu" to="/jeu">
+              Jeu
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-ressource" to="/ressource">
+              Ressources
+            </Link>
+          </li>
+        </ul>
       </div>
     );
   }
