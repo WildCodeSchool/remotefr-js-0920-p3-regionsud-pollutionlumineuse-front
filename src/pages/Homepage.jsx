@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 
+const messageCle =
+  'L’Homme étant habitué à une alternance de jour et de nuit, son cycle de sommeil est synchronisé avec le cycle de lumière et d’obscurité de la Terre. L’éclairage artificiel nocturne perturbe celui-ci et a notamment des effets sur sa santé comme la perturbation de la production des hormones, du sommeil, de la digestion, de la régénération des cellules. En matière de pollution lumineuse l’homme est principalement soumis à la lumière intrusive : une lumière non voulue qui envahie son habitat du fait de la présence d’éclairage extérieur.';
+const messageCleMiseEnForme = messageCle.split('.');
+const messageCleFinal = `<strong>${messageCleMiseEnForme[0]}. </strong>${messageCleMiseEnForme[1]}`;
+
 export default function Homepage() {
   return (
     <div className="Homepage">
@@ -9,11 +14,11 @@ export default function Homepage() {
         <h2>Ressources</h2>
 
         <div className="toggle">
-          <span>Particulier</span>
+          <p>Particulier</p>
           <input type="checkbox" id="switch" />
           {/* eslint-disable-next-line */}
           <label for="switch"></label>
-          <span>Professionnel</span>
+          <p>Professionnel</p>
         </div>
 
         <div className="couvpdf">
@@ -23,12 +28,17 @@ export default function Homepage() {
         </div>
 
         <div className="buttons">
-          <Link to="/definition" title="">
+          <Link to="/ressource" title="">
             Découvrir toute la documentation
           </Link>
-          <Link to="/definition" title="">
+          <a
+            href="https://www.youtube.com/"
+            title=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Voir la chaîne Youtube
-          </Link>
+          </a>
         </div>
       </article>
 
@@ -36,24 +46,14 @@ export default function Homepage() {
         <article className="imagePhare">
           <h2>Vous avez suivi une animation ?</h2>
           <img
-            src="https://via.placeholder.com/600x200?text=Donnez-nous+votre+avis+!"
+            src="https://via.placeholder.com/600x190?text=Donnez-nous+votre+avis+!"
             alt=""
           />
         </article>
 
         <article className="articlePhare">
           <h2>La nuit et la santé humaine</h2>
-          <p>
-            L’Homme étant habitué à une alternance de jour et de nuit, son cycle
-            de sommeil est synchronisé avec le cycle de lumière et d’obscurité
-            de la Terre. L’éclairage artificiel nocturne perturbe celui-ci et a
-            notamment des effets sur sa santé comme la perturbation de la
-            production des hormones, du sommeil, de la digestion, de la
-            régénération des cellules. En matière de pollution lumineuse l’homme
-            est principalement soumis à la lumière intrusive : une lumière non
-            voulue qui envahie son habitat du fait de la présence d’éclairage
-            extérieur.
-          </p>
+          <p>{messageCleFinal}</p>
           <div className="buttons">
             <Link to="/mot-message-cle" title="">
               Lire la suite
