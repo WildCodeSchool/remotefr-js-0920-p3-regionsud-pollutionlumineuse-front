@@ -22,14 +22,12 @@ class Header extends React.Component {
           className="logoRegionSud"
           alt="logo region sud"
         />
-        <h1>La Poluttion Lumineuse</h1>
+
+        <Link className="nav-homepage" to="/">
+          <h1>La Poluttion Lumineuse</h1>
+        </Link>
 
         <ul>
-          <li>
-            <Link className="nav-homepage" to="/">
-              Homepage
-            </Link>
-          </li>
           <li>
             <Link className="nav-message-cle" to="/mot-message-cle">
               Messages-cles
