@@ -1,9 +1,14 @@
-.essential h2 {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.essential h2, .essential h1{
   margin : 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 .button_keyMessage_title {
   background-color : #4A756D;
+  font-family: 'Oswald', sans-serif;
   border : 0;
   padding : 0.5% 2%;
   color : #D7E0DF;
@@ -13,6 +18,7 @@
 }
 
 .essential_bloc {
+  margin-top : 2%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -39,6 +45,8 @@
   background-color: #DAE3E0;
   padding : 2%;
   color : black;
+  
+  font-family: 'Lato', sans-serif;
 }
 
 .image_article {
@@ -56,6 +64,7 @@
 
 .essential {
   color : #4A756D;
+  min-height : 77vh;
 }
 
 .keynumber_details {
@@ -69,6 +78,8 @@
   padding : 5%;
   border-radius: 15px;
   width: 250px;
+  
+  font-family: 'Lato', sans-serif;
 }
 
 .keymessage_bulle_right {
