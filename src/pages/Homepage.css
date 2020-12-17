@@ -67,7 +67,7 @@ p:first-letter {
   bottom: 0;
 }
 
-label {
+.Homepage label {
   cursor: pointer;
   width: 60px;
   height: 30px;
@@ -78,7 +78,7 @@ label {
   position: relative;
 }
 
-label:after {
+.Homepage label:after {
   content: '';
   position: absolute;
   top: 5px;

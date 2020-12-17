@@ -17,7 +17,7 @@ export default function Homepage() {
           <p>Particulier</p>
           <input type="checkbox" id="switch" />
           {/* eslint-disable-next-line */}
-          <label for="switch"></label>
+          <label htmlFor="switch"></label>
           <p>Professionnel</p>
         </div>
 
