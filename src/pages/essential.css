@@ -1,0 +1,95 @@
+.essential h2 {
+  margin : 0;
+}
+
+.button_keyMessage_title {
+  background-color : #4A756D;
+  border : 0;
+  padding : 0.5% 2%;
+  color : #D7E0DF;
+  font-size : 1.2em;
+  margin : 0.5%;
+  flex-grow: 1;
+}
+
+.essential_bloc {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.keynumber_bloc {
+  width : 30%;
+  text-align: left;
+  max-height : 70%;
+}
+
+.keymessage_bloc {
+  width : 60%;
+  text-align: left;
+}
+
+.button_keymessage_bloc {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_article {
+  background-color: #DAE3E0;
+  padding : 2%;
+  color : black;
+}
+
+.image_article {
+  width : 100%;
+  height: 25vh;  
+  position: relative;
+}
+
+.image_article h2 {
+  position: absolute;
+  bottom : 0%;
+  left : 1%;
+  color : #D7E0DF;
+}
+
+.essential {
+  color : #4A756D;
+}
+
+.keynumber_details {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.keynumber_bulle {
+  background-color : #DAE3E0;
+  margin : 5% 0;
+  padding : 5%;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.keymessage_bulle_right {
+  margin : 0 auto;
+}
+
+@media screen and (max-width:920px) {
+  .essential_bloc {
+    flex-direction: column;
+    align-items: center;
+  }
+  .keymessage_bloc {
+    width : 80%;
+  }
+  .keynumber_bloc {
+    width : 80%;
+  }
+}
+
+.keyNumberRed {
+  color : rgb(209, 66, 66);
+  font-weight : bolder;
+  font-size : 1.5em;
+}
