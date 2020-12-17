@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  position: relative;
+  align-items: left;
+  width: 100%;
+  padding: 72px 0 16px;
+  margin-bottom: 4rem;
+  background-color: #4a756c;
+}
+
+.logoRegionSud {
+  max-width: 30%;
+  justify-content: center;
+}
+
+.nav-homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header li {
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 1.4em;
+}
+
+.header li a {
+  color: white;
+}
+
+.header h1 {
+  align-items: center;
+  justify-content: center;
+  font-family: 60px 'Open Sans';
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+}

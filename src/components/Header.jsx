@@ -16,7 +16,7 @@ class Header extends React.Component {
   // };
   render() {
     return (
-      <div>
+      <div className="header">
         <img
           src="https://www.pnr-queyras.fr/ecmedias/2020/05/tampon-PNR-PACA.jpg"
           className="logoRegionSud"
