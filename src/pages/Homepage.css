@@ -63,17 +63,19 @@ p:first-letter {
   height: 0;
   width: 0;
   visibility: hidden;
+  position: absolute;
+  bottom: 0;
 }
 
 label {
   cursor: pointer;
   width: 60px;
   height: 30px;
+  margin: 0 0.5em 0 0.5em;
   background: grey;
   display: block;
   border-radius: 100px;
   position: relative;
-  left: -11px;
 }
 
 label:after {
