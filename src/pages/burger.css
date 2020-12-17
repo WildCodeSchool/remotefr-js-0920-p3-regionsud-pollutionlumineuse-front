@@ -1,0 +1,21 @@
+@import 'icons.css';
+
+.navbar ul {
+  display: none;
+}
+
+.navbar input[type='checkbox'] {
+  display: none;
+}
+
+.navbar input[type='checkbox']:checked ~ ul {
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+.span-1 .span-2 {
+  background: #fcc;
+}
