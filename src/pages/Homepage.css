@@ -7,9 +7,10 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: auto;
+  justify-content: space-around;
 }
-.Ressource {
-  width: 30%;
+.ressource {
+  width: 29%;
 }
 .articles {
   width: 70%;
@@ -21,6 +22,7 @@
 h2 {
   color: #4a756c;
   font-family: 'Oswald', sans-serif;
+  text-align: left;
 }
 p {
   color: #666;
@@ -30,6 +32,7 @@ p {
 .toggle {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   font-family: 'Oswald', sans-serif;
   color: #4a756c;
 }
@@ -37,15 +40,36 @@ p {
   width: 100%;
 }
 .couvpdf img {
-  max-width: 45%;
+  width: 45%;
   margin: 1%;
 }
 
-.Definition {
+.imagePhare,
+.imagePhare img {
   width: 100%;
 }
 .articlePhare {
-  width: 40%;
+  width: 47%;
+}
+.articlePhare a,
+.ressource a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.4em;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+}
+.articlePhare a:last-child,
+.ressource a:last-child {
+  background-color: rgb(74, 117, 108, 0.21);
+  color: #4a756c;
+}
+.articlePhare a:nth-last-child(2n),
+.ressource a:nth-last-child(2n) {
+  background-color: #4a756c;
+  color: #eafaf6;
 }
 
 /* switch */
@@ -91,14 +115,20 @@ label:active:after {
   width: 130px;
 }
 
-// centering
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 /* ----- */
+
+@media (max-width: 1000px) {
+  .Homepage {
+    width: 95%;
+  }
+  .ressource,
+  .articles {
+    width: 100%;
+  }
+  .couvpdf img {
+    width: 30%;
+  }
+}
 
 @media (max-width: 700px) {
   .Homepage {

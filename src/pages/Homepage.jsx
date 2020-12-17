@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Homepage.css';
 
 export default function Homepage() {
   return (
     <div className="Homepage">
-      <article className="Ressource">
+      <article className="ressource">
         <h2>Ressources</h2>
+
         <div className="toggle">
           <span>Particulier</span>
           <input type="checkbox" id="switch" />
@@ -13,17 +15,26 @@ export default function Homepage() {
           <label for="switch"></label>
           <span>Professionnel</span>
         </div>
+
         <div className="couvpdf">
           <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
           <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
           <img src="https://via.placeholder.com/297x210?text=Couv+PDF" alt="" />
         </div>
+
+        <Link to="/definition" title="">
+          Lire la suite
+        </Link>
+        <Link to="/definition" title="">
+          Voir toutes les définitions
+        </Link>
       </article>
 
       <div className="articles">
-        <article className="Definition">
+        <article className="imagePhare">
+          <h2>La nuit et la santé humaine</h2>
           <img
-            src="https://via.placeholder.com/600x297?text=Vous+avez+suivi+une+animation+?+Donnez-nous+votre+avis+!"
+            src="https://via.placeholder.com/600x200?text=Vous+avez+suivi+une+animation+?+Donnez-nous+votre+avis+!"
             alt=""
           />
         </article>
@@ -41,6 +52,12 @@ export default function Homepage() {
             voulue qui envahie son habitat du fait de la présence d’éclairage
             extérieur.
           </p>
+          <Link to="/mot-message-cle" title="">
+            Lire la suite
+          </Link>
+          <Link to="/mot-message-cle" title="">
+            Voir tous les messages-clés
+          </Link>
         </article>
 
         <article className="articlePhare">
@@ -54,6 +71,12 @@ export default function Homepage() {
             créant ainsi un halo lumineux pouvant être visible sur de longues
             distances.
           </p>
+          <Link to="/definition" title="">
+            Lire la suite
+          </Link>
+          <Link to="/definition" title="">
+            Voir toutes les définitions
+          </Link>
         </article>
       </div>
     </div>
