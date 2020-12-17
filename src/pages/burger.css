@@ -1,7 +1,27 @@
 @import 'icons.css';
 
+.navbar {
+  display: flex;
+  background: #444;
+  color: #eee;
+  height: 2em;
+}
+
+.home-link {
+  flex-grow: 1;
+  padding: 1em;
+}
+
 .navbar ul {
   display: none;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style-type: none;
 }
 
 .navbar input[type='checkbox'] {
@@ -10,6 +30,10 @@
 
 .navbar input[type='checkbox']:checked ~ ul {
   display: block;
+}
+
+.navbar input[type='checkbox']:checked + label .icon-cross {
+  display: inline;
 }
 
 span {
