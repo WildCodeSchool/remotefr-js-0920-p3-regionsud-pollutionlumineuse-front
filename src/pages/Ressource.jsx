@@ -1,5 +1,6 @@
 import React from 'react';
 import './Ressource.css';
+import SingleRessource from '../components/SingleRessource';
 import kitPratiquePourRallumer from '../ressource/kit-pratique-pour-rallumer-les-etoiles.pdf';
 import leCoteObscurDesPNR from '../ressource/le-cote-obscur-des-parcs-naturels-regionaux.pdf';
 import livretPedagogique from '../ressource/livret-pedagogique-monde-nocturne.pdf';
@@ -123,11 +124,15 @@ export default function Ressource() {
       <h2>Ressources</h2>
       <h3>Documentation à télécharger</h3>
       <article className="documentations">
-        <a href={ressource[0].url}>{ressource[0].title}</a>
+        {ressource.map((card) => (
+          <SingleRessource url={card.url} title={card.title} />
+        ))}
       </article>
       <h3>Sites à consulter</h3>
       <article className="sites">
-        <a href={ressource[15].url}>{ressource[15].title}</a>
+        {ressource.map((card) => (
+          <SingleRessource url={card.url} title={card.title} />
+        ))}
       </article>
     </div>
   );
