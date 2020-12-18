@@ -189,15 +189,30 @@ const ButtonKeyMessage = ({ id, title, handleClickKeyButton }) => (
   </button>
 );
 
-const ArticleKeyMessage = ({ imgBackground, title, description }) => (
-  <>
-    <div className="image_article">
-      <img className="image_article" alt="article_image" src={imgBackground} />
-      <h2>{title}</h2>
-    </div>
-    <div className="text_article">{description}</div>
-  </>
-);
+const ArticleKeyMessage = ({ imgBackground, title, description }) => {
+  let descc;
+  if (description) {
+    const desc = description.split('.');
+    desc[0] = `<strong>${desc[0]}</strong>`;
+    descc = desc.join('.');
+  }
+  return (
+    <>
+      <div className="image_article">
+        <img
+          className="image_article"
+          alt="article_image"
+          src={imgBackground}
+        />
+        <h2>{title}</h2>
+      </div>
+      <div
+        className="text_article"
+        dangerouslySetInnerHTML={{ __html: descc }}
+      />
+    </>
+  );
+};
 
 const KeyMessageBulle = ({ text, align }) => (
   <div
