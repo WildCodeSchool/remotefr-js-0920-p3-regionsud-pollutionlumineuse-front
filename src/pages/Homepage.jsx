@@ -19,15 +19,6 @@ export default function Homepage() {
     <div className="Homepage">
       <article className="ressource">
         <h2>Ressources</h2>
-
-        <div className="toggle">
-          <p>Particulier</p>
-          <input type="checkbox" id="switch" />
-          {/* eslint-disable-next-line */}
-          <label htmlFor="switch"></label>
-          <p>Professionnel</p>
-        </div>
-
         <div className="couvpdf">
           <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
           <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
