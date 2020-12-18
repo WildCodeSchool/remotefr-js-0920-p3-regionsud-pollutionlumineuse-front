@@ -59,7 +59,7 @@ export default function Practical() {
   const [detail, setDetail] = React.useState(tools[0]);
   return (
     <div className="Practical">
-      <h2>Les outils</h2>
+      <h2>Les outils pour explorer la nuit</h2>
       <div className="photos">
         <article className="intro">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

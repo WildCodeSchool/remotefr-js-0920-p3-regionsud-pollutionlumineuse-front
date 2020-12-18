@@ -1,6 +1,7 @@
-h2 {
+.Practical h2 {
   width: 100%;
   text-align: center;
+  margin: 0 0 1em 0;
 }
 .Practical {
   display: flex;
@@ -13,15 +14,17 @@ h2 {
   text-align: justify;
   font-family: 'Oswald', sans-serif;
   background-color: rgb(74, 117, 108, 0.21);
-  width: 20%;
+  width: 30%;
   padding: 2%;
+  display: flex;
+  flex-direction: column;
 }
 .Practical .photos {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
+  width: 60%;
 }
 
 .Practical .intro {
@@ -30,20 +33,22 @@ h2 {
   background-color: rgb(74, 117, 108, 0.21);
   width: 30%;
   padding: 2%;
-  margin: 0 0 2em 0;
+  margin: 0 0 2% 0;
 }
 
 .Practical .photos img {
-  width: 30%;
-  margin: 1%;
+  width: 28%;
+  padding: 2%;
   transition-duration: 0.2s;
   cursor: pointer;
 }
 .Practical .photos img:hover {
   scale: 110%;
 }
-.Practical .photoDesc {
+.photoDesc {
   width: 100%;
+  max-width: 350px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -53,7 +58,6 @@ h2 {
     align-items: center;
   }
   .Practical .intro {
-    order: 1;
     width: 90%;
   }
   .Practical .photos {
