@@ -1,0 +1,41 @@
+.cardInfo {
+  width : calc(85%/3);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.cardInfo_body {
+  width: 100%;
+  box-sizing: border-box;
+  border : 1px solid #4A756D;
+}
+
+.cardInfo_body p {
+  text-align: center;
+}
+
+.cardInfo_body img {
+  width : 150px;
+  height : 150px;
+
+}
+
+.cardInfo_header {
+  background-color: #4A756D;
+  border-radius : 20px 20px 0 0;
+}
+
+.infomemo {
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+@media screen and (max-width:800px) {
+  .cardInfo {
+    width : auto;
+  }
+}

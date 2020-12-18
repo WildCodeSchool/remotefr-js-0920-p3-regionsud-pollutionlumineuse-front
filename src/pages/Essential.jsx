@@ -140,7 +140,7 @@ export default function Essential() {
 
   return (
     <div className="essential">
-      <h1>L'essentiel</h1>
+      <h2>L'essentiel</h2>
       <section className="essential_bloc">
         <aside className="keynumber_bloc">
           <h2>Chiffres-clés</h2>

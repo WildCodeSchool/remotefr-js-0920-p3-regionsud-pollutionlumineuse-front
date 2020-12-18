@@ -4,6 +4,7 @@
 .essential h2, .essential h1{
   margin : 0;
   font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 
 .button_keyMessage_title {
@@ -21,6 +22,10 @@
   margin-top : 2%;
   display: flex;
   justify-content: space-evenly;
+}
+
+.essential_bloc h2 {
+  text-align: left;
 }
 
 .keynumber_bloc {

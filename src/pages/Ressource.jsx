@@ -3,7 +3,7 @@ import React from 'react';
 export default function Ressource() {
   return (
     <>
-      <h1>Page Ressource</h1>
+      <h2>Page Ressource</h2>
     </>
   );
 }
