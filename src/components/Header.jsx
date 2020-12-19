@@ -62,7 +62,7 @@ function Header() {
           <Link to="/mot-message-cle">L'essentiel</Link>
         </li>
         <li>
-          <Link to="/definition">Definitions</Link>
+          <Link to="/definition">Définitions</Link>
         </li>
         <li>
           <Link to="/pratique">Les outils</Link>
