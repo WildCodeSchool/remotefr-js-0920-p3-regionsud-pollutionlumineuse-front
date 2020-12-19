@@ -113,9 +113,26 @@ p:first-letter {
 }
 
 .imagePhare,
-.imagePhare img {
+.imagePhare p {
   width: 100%;
 }
+.imagePhare a {
+  height: 327px;
+  background-image: url('../image/animation-nocturne.jpg');
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.imagePhare a p {
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0 0.5em 0.7em 0.5em;
+}
+
 .articlePhare {
   width: 47%;
   display: flex;
@@ -171,5 +188,12 @@ p:first-letter {
   }
   .articlePhare {
     width: 100%;
+  }
+  .imagePhare a {
+    height: 250px;
+  }
+  .imagePhare a p {
+    font-size: 2.5rem;
+    padding: 0 0.5em 0 0.5em;
   }
 }
