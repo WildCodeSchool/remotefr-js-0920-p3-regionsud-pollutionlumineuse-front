@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Ressource.css';
 import SingleRessource from '../components/SingleRessource';
 import kitPratiquePourRallumer from '../ressource/kit-pratique-pour-rallumer-les-etoiles.pdf';
@@ -119,20 +119,64 @@ const ressource = [
 ];
 
 export default function Ressource() {
+  const [showPro, setShowPro] = useState(false);
   return (
     <div className="Ressource">
       <h2>Ressources</h2>
+      <div className="toggle">
+        <p>Particulier</p>
+        <input
+          value={showPro}
+          checked={showPro}
+          onChange={() => setShowPro((old) => !old)}
+          type="checkbox"
+          id="switch"
+        />
+        {/* eslint-disable-next-line */}
+        <label htmlFor="switch"></label>
+        <p>Professionnel</p>
+      </div>
       <h3>Documentation à télécharger</h3>
       <article className="documentations">
-        {ressource.map((card) => (
-          <SingleRessource url={card.url} title={card.title} />
-        ))}
+        {ressource.map((card) =>
+          !showPro
+            ? card.professional === 0 &&
+              !card.url.includes('http') && (
+                <SingleRessource
+                  key={card.id}
+                  url={card.url}
+                  title={card.title}
+                />
+              )
+            : !card.url.includes('http') && (
+                <SingleRessource
+                  key={card.id}
+                  url={card.url}
+                  title={card.title}
+                />
+              ),
+        )}
       </article>
       <h3>Sites à consulter</h3>
       <article className="sites">
-        {ressource.map((card) => (
-          <SingleRessource url={card.url} title={card.title} />
-        ))}
+        {ressource.map((card) =>
+          !showPro
+            ? card.professional === 0 &&
+              card.url.includes('http') && (
+                <SingleRessource
+                  key={card.id}
+                  url={card.url}
+                  title={card.title}
+                />
+              )
+            : card.url.includes('http') && (
+                <SingleRessource
+                  key={card.id}
+                  url={card.url}
+                  title={card.title}
+                />
+              ),
+        )}
       </article>
     </div>
   );
