@@ -52,7 +52,7 @@ export default function Definition() {
 
   return (
     <div className="definition_page">
-      <h2>Definition</h2>
+      <h2>Définitions</h2>
       <main>
         <section className="definition_title">
           {definition.map((d) => (
