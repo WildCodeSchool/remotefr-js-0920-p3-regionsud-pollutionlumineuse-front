@@ -65,7 +65,7 @@ export default function Game() {
           </button>
         )}
       </h2>
-      {win === true ? (
+      {win === false ? (
         <Memo changeLeftEven={setLeftEven} infoToModal={setRessource} />
       ) : (
         <InfoMemo />
