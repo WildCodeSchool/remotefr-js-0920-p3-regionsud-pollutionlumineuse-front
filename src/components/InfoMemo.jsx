@@ -11,44 +11,44 @@ const memory = [
   {
     id: 0,
     image: chauvesouris,
-    title: 'La Chauve-Souris',
+    title: 'La chauve-souris',
     description:
-      "Impacter par l'éclairage nocturne, les chauves-souris, ainsi que d'autres espèces, fuit les villes et voient leur territoire de chasse considérablement réduit. Leur reproduction est également impacté.",
+      "Impactées par l'éclairage nocturne, les chauves-souris, ainsi que d'autres espèces, fuient les villes et voient leur territoire de chasse considérablement réduit. Leur reproduction est également impactée.",
   },
   {
     id: 1,
     image: insecte,
     title: 'Les insectes',
     description:
-      'Une majorité de nos insectes volants sont nocturnes. Ils sont tué a causes des éclairages publics notamment qui les attire pour certain, ou bien il fuit completement. Ce qui boulverse la biodiversité et fait fuire leur prédateurs.',
+      'Une majorité de nos insectes volants sont nocturnes. Des milliers sont tués chaque nuit par l&apos;éclairage public qui attire irrésistiblement certains insectes : ceux-ci finissent par mourir d&apos;épuisement... D&apos;autres espèces d&apos;insectes nocturnes fuient cette lumière instrusive, ce qui les fait disparaître de la zone géographique éclairée. Cela génère une réaction en chaîne, et c&apos;est toute la biodiversité qui en est perturbée.',
   },
   {
     id: 2,
     image: etoile,
     title: 'Le ciel étoilé',
     description:
-      "L'éclairage nocturne empêche fortement d'admirer le spectacle nocturne au dessus de nos têtes. Appercevoir un soir d'été une rivière d'étoile et peut être quelques étoiles filantes est remis en question selon l'altitude avec ce type de pollution.. ",
+      "Apercevoir un soir d'été la beauté de la voie lactée, ou observer les planètes et les constellations avec un télescope... devient impossible dans certaines zones géographiques. Une meilleure gestion de l'éclairage nocturne permet de retrouver nos chères étoiles filantes !",
   },
   {
     id: 3,
     image: homme,
-    title: "L'Homme",
+    title: "L'homme",
     description:
-      "Notre systeme/horloge biologique est touché par la pollution lumineuse. La sécrétion de l'hormone du sommeil (mélatonine) est la principale victime ce qui peut causé des insomnies, troubles du sommeil, etc. ",
+      "Notre horloge biologique est en partie basée sur l'alternance jour/nuit (lumière/obscurité). Trop d'éclairage nocturne perturbe la sécrétion de l'hormone du sommeil (mélatonine), causant insomnies, troubles du sommeil, etc.",
   },
   {
     id: 4,
     image: lampadaire,
-    title: 'Les Lampadaires',
+    title: 'Les lampadaires',
     description:
-      "Il est importer pour les villes de s'équiper en lampadaire plus adapté au besoin. Certaine centralise la lumiere sur un point plûtot que de la diffuser, le type d'ampoule est également important.",
+      "Il est important pour les villes de s'équiper en lampadaires plus adaptés aux besoins réels. Certains sont capables de centraliser la lumière sur un point précis (plûtot que de la diffuser), le choix des ampoules est également important.",
   },
   {
     id: 5,
     image: plante,
-    title: 'La Flore urbaine',
+    title: 'La flore urbaine',
     description:
-      "La flore se voit touché, notamment lorsqu'elle se développe près d'une source lumineuse. Elle voit son développement accéléré. Les arbres par exemple ont un bourgeonnement précoce, ce qui boulverse tout la biodiversité...",
+      "La flore se voit touchée, notamment lorsqu'elle se développe près d'une source lumineuse. Elle voit son développement accéléré. Les arbres par exemple ont un bourgeonnement précoce, ce qui boulverse toute la biodiversité...",
   },
 ];
 
