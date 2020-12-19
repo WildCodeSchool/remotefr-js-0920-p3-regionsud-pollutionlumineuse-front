@@ -55,6 +55,10 @@ const memory = [
   },
 ];
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default function Memo({ changeLeftEven, infoToModal }) {
   useEffect(() => {
     let firstcard = null;
@@ -68,15 +72,14 @@ export default function Memo({ changeLeftEven, infoToModal }) {
       secondcard.removeEventListener('click', flipCard);
       reset();
     }
-    function unflipCards() {
-      setTimeout(() => {
-        firstcard.children[0].classList.toggle('flipped');
-        firstcard.children[1].classList.toggle('flipped');
-        secondcard.children[0].classList.toggle('flipped');
-        secondcard.children[1].classList.toggle('flipped');
+    async function unflipCards() {
+      await sleep(200);
+      firstcard.children[0].classList.toggle('flipped');
+      firstcard.children[1].classList.toggle('flipped');
+      secondcard.children[0].classList.toggle('flipped');
+      secondcard.children[1].classList.toggle('flipped');
 
-        reset();
-      }, 200);
+      reset();
     }
     function flipCard() {
       this.children[0].classList.toggle('flipped');

@@ -4,6 +4,10 @@ import './game.css';
 import Memo from '../components/Memo';
 import InfoMemo from '../components/InfoMemo';
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 const customStyles = {
   content: {
     top: '50%',
@@ -12,6 +16,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    fontFamily: 'Lato',
   },
 };
 Modal.setAppElement('#root');
@@ -35,9 +40,12 @@ export default function Game() {
   }, [leftEven]);
 
   useEffect(() => {
-    if (ressource.title) {
-      openModal();
-    }
+    (async () => {
+      if (ressource.title) {
+        await sleep(250);
+        openModal();
+      }
+    })();
   }, [ressource]);
 
   return (
@@ -57,7 +65,7 @@ export default function Game() {
           </button>
         )}
       </h2>
-      {win === false ? (
+      {win === true ? (
         <Memo changeLeftEven={setLeftEven} infoToModal={setRessource} />
       ) : (
         <InfoMemo />
@@ -71,7 +79,7 @@ export default function Game() {
         <button className="buttonMemo" type="button" onClick={closeModal}>
           Fermer
         </button>
-        <h2>{ressource.title}</h2>
+        <h2 style={{ fontFamily: 'Oswald' }}>{ressource.title}</h2>
 
         <div>{ressource.description}</div>
       </Modal>
