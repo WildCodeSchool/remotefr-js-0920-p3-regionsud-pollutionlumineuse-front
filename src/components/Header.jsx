@@ -36,7 +36,7 @@ function Header() {
         <img
           src="https://www.pnr-queyras.fr/ecmedias/2020/05/tampon-PNR-PACA.jpg"
           className="logoRegionSud"
-          alt="logo region sud"
+          alt="Parcs Naturels Régionaux de Provence-Alpes-Côte d'Azur"
         />
 
         <Link className="nav-homepage" to="/">
