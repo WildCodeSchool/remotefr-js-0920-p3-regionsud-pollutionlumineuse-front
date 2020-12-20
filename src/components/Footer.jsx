@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import '../css/Footer.css';
 import logosprnc from '../image/logosprnc.png';
 
 export default function Footer() {

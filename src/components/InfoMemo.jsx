@@ -1,5 +1,5 @@
 import React from 'react';
-import './infomemo.css';
+import '../css/infomemo.css';
 
 export default function InfoMemo({ memoryList }) {
   return (

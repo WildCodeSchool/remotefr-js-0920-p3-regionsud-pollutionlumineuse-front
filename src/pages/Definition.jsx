@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './definition.css';
+import '../css/definition.css';
 import pollutiondef from '../image/pollutiondef.jpg';
 import Loader from '../components/Loader';
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Practical.css';
+import '../css/Practical.css';
 import PracticalDescription from '../components/PracticalDescription';
 import Loader from '../components/Loader';
 

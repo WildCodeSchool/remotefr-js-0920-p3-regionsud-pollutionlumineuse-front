@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Ressource.css';
+import '../css/Ressource.css';
 import SingleRessource from '../components/SingleRessource';
 import Loader from '../components/Loader';
 

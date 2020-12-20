@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './essential.css';
+import '../css/essential.css';
 import backgroundArticle from './background_article.jpg';
 import Loader from '../components/Loader';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import axios from 'axios';
-import './game.css';
+import '../css/game.css';
 import Loader from '../components/Loader';
 import Memo from '../components/Memo';
 import InfoMemo from '../components/InfoMemo';
