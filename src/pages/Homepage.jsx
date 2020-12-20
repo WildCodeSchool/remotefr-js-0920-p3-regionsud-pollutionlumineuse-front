@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
-// import animation from '../image/animation-nocturne.jpg';
 import pdf1 from '../image/livret-pedagogique-monde-nocturne.PNG';
 import pdf2 from '../image/le-cote-obscur-des-parcs-naturels-regionaux.PNG';
 import pdf3 from '../image/kit-pratique-pour-rallumer-les-etoiles.PNG';

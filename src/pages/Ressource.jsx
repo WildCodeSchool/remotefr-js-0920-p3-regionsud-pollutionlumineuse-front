@@ -38,8 +38,7 @@ export default function Ressource() {
           type="checkbox"
           id="switch"
         />
-        {/* eslint-disable-next-line */}
-        <label htmlFor="switch"></label>
+        <label htmlFor="switch" />
         <p>Professionnel</p>
       </div>
       <h3>Documentation à télécharger</h3>

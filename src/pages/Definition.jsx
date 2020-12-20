@@ -63,9 +63,14 @@ const DefBulle = ({ title, id, changeDefinition }) => (
   </div>
 );
 
-const DefCont = ({ desc }) => (
-  <>
-    <img src={pollutiondef} alt="pollution" />
-    <p>{desc}</p>
-  </>
-);
+const DefCont = ({ desc }) => {
+  const messageCleMiseEnForme = desc.split('.');
+  messageCleMiseEnForme[0] = `<strong>${messageCleMiseEnForme[0]}</strong>`;
+  const messageCleFinal = messageCleMiseEnForme.join('.');
+  return (
+    <>
+      <img src={pollutiondef} alt="pollution" />
+      <p dangerouslySetInnerHTML={{ __html: messageCleFinal }} />
+    </>
+  );
+};

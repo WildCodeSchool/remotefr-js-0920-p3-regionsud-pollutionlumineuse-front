@@ -1,6 +1,3 @@
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-use-before-define */
 import React, { useEffect } from 'react';
 import frontcard from '../image/backcardmemo.png';
 
@@ -63,7 +60,6 @@ export default function Memo({ memoryList, changeLeftEven, infoToModal }) {
   return (
     <div className="game_bloc">
       {memoryList.concat(memoryList).map((card, itt) => (
-        // eslint-disable-next-line react/no-array-index-key
         <MemoryCard image={card.image} id={card.id} key={itt} />
       ))}
     </div>
@@ -71,7 +67,6 @@ export default function Memo({ memoryList, changeLeftEven, infoToModal }) {
 }
 
 const MemoryCard = ({ image, id }) => (
-  // card = memory-card
   <div className="memory-card" data-card={id}>
     <img className="front-face" src={frontcard} alt="cartfront" />
     <img className="back-face" src={image} alt="JS Badge" />

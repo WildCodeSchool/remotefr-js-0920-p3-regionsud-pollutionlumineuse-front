@@ -1,4 +1,3 @@
-/* eslint-disable no-lonely-if */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './essential.css';
