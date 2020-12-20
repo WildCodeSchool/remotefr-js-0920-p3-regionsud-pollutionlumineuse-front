@@ -1,13 +1,14 @@
 .header {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 5px 0;
+  width: 96%;
+  padding: 5px 2%;
   margin-bottom: 1.5rem;
   background-color: #4a756c;
-  background-image: url("http://geo.pnrpaca.org/wp-content/themes/pnrpaca/images/topographic-map-pattern.png");
-  height : 80px;
+  background-image: url('http://geo.pnrpaca.org/wp-content/themes/pnrpaca/images/topographic-map-pattern.png');
+  height: 80px;
   font-family: 'Oswald', sans-serif;
+  justify-content: space-between;
 }
 
 .header a {
@@ -20,10 +21,10 @@
 }
 
 .logoRegionSud {
-  width : 180px;
-  height : 50px;
-  padding : 0 2%;
-  margin : auto 0;
+  width: auto;
+  height: 50px;
+  padding: 0 2%;
+  margin: auto 2rem auto 0;
 }
 
 .nav-homepage {
@@ -32,13 +33,18 @@
   align-items: center;
 }
 
+.nav-homepage h1 {
+  width: max-content;
+  line-height: 115%;
+}
+
 .header_nav {
-  padding-inline-start : 0;
-  margin-left: auto;
+  padding-inline-start: 0;
   padding-right: 2%;
   list-style: none;
   display: flex;
-  z-index : 1;
+  z-index: 1;
+  white-space: nowrap;
 }
 
 .header_nav a:hover {
@@ -46,7 +52,7 @@
 }
 
 .header_nav li {
-  margin-left : 1em;
+  margin-left: 1em;
 }
 
 .header li a {
@@ -55,24 +61,33 @@
 
 .header h1 {
   color: #fff;
-  margin : 0;
+  margin: 0;
 }
 
- .burger_menu {
-   cursor: pointer;
-   margin-left: auto;
-   margin-right: 2%;
-   font-size : 2em;
-   display : none;
- }
+.burger_menu {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 2%;
+  font-size: 2em;
+  display: none;
+}
 
- .burger_ckbox {
-   display : none;
- }
+.burger_ckbox {
+  display: none;
+}
 
- .burger_ckbox:checked ~ .header_nav {
-   display: inherit;
- }
+.burger_ckbox:checked ~ .header_nav {
+  display: inherit;
+}
+
+@media screen and (max-width: 1006px) {
+  .header h1 {
+    font-size: 1.7em;
+  }
+  .logoRegionSud {
+    margin: auto 0;
+  }
+}
 
 @media screen and (max-width: 940px) {
   .burger_menu {
@@ -82,25 +97,25 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top:90px;
+    top: 90px;
     right: 0;
-    background-color: #F6F6F7;
+    background-color: #f6f6f7;
     margin: 0;
-    width : 70%;
-    height : auto;
+    width: 70%;
+    height: auto;
     padding: 0;
   }
   .header_nav li a {
-  color : black;
-  padding : 1em 0;
-  padding-left: 1.2em;
-  display : block;
+    color: black;
+    padding: 1em 0;
+    padding-left: 1.2em;
+    display: block;
   }
   .header_nav li {
-    border-bottom : 1px solid black;
+    border-bottom: 1px solid black;
     margin: 0;
-    width : 80%;
-    margin:0 auto;
+    width: 80%;
+    margin: 0 auto;
     text-align: left;
   }
   .header_nav li:last-child {
@@ -108,18 +123,17 @@
   }
 
   .header_nav li:hover {
-  background-color: #d1d1d3;
-  }
-}
-
-@media screen and (max-width: 1006px) {
-  .header h1 {
-    font-size: 1.5em;
+    background-color: #d1d1d3;
   }
 }
 
 @media screen and (max-width: 568px) {
   .header h1 {
-    font-size: 1em;
+    width: auto;
+    word-wrap: break-word;
+  }
+  .logoRegionSud {
+    width: 60%;
+    height: auto;
   }
 }
