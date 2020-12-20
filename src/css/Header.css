@@ -1,13 +1,14 @@
 .header {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 5px 0;
+  width: 96%;
+  padding: 5px 2%;
   margin-bottom: 1.5rem;
   background-color: #4a756c;
   background-image: url('http://geo.pnrpaca.org/wp-content/themes/pnrpaca/images/topographic-map-pattern.png');
   height: 80px;
   font-family: 'Oswald', sans-serif;
+  justify-content: space-between;
 }
 
 .header a {
@@ -23,7 +24,7 @@
   width: auto;
   height: 50px;
   padding: 0 2%;
-  margin: auto 0;
+  margin: auto 2rem auto 0;
 }
 
 .nav-homepage {
@@ -32,13 +33,18 @@
   align-items: center;
 }
 
+.nav-homepage h1 {
+  width: max-content;
+  line-height: 115%;
+}
+
 .header_nav {
   padding-inline-start: 0;
-  margin-left: auto;
   padding-right: 2%;
   list-style: none;
   display: flex;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .header_nav a:hover {
@@ -72,6 +78,15 @@
 
 .burger_ckbox:checked ~ .header_nav {
   display: inherit;
+}
+
+@media screen and (max-width: 1006px) {
+  .header h1 {
+    font-size: 1.7em;
+  }
+  .logoRegionSud {
+    margin: auto 0;
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -112,14 +127,13 @@
   }
 }
 
-@media screen and (max-width: 1006px) {
-  .header h1 {
-    font-size: 1.5em;
-  }
-}
-
 @media screen and (max-width: 568px) {
   .header h1 {
-    font-size: 1em;
+    width: auto;
+    word-wrap: break-word;
+  }
+  .logoRegionSud {
+    width: 60%;
+    height: auto;
   }
 }
