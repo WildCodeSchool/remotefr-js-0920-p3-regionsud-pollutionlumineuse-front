@@ -3,6 +3,10 @@ body {
   background-color: #E9E8E7;
 }
 
+.App {
+  text-align: center;
+}
+
 /* loader  */
 .lds-default {
   display: inline-block;
