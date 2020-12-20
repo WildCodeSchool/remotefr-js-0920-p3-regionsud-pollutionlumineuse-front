@@ -53,14 +53,31 @@ p:first-letter {
   width: 45%;
   margin: 1%;
 }
-.couvpdf img:nth-child(3) {
+.couvpdf a:nth-child(3) img {
   width: 92%;
 }
 
 .imagePhare,
-.imagePhare img {
+.imagePhare p {
   width: 100%;
 }
+.imagePhare a {
+  height: 327px;
+  background-image: url('../image/animation-nocturne.jpg');
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.imagePhare a p {
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0 0.5em 0.7em 0.5em;
+}
+
 .articlePhare {
   width: 47%;
   display: flex;
@@ -72,7 +89,7 @@ p:first-letter {
   width: 100%;
 }
 .articlePhare a,
-.ressource a {
+.ressource .buttons a {
   display: inline-block;
   width: 100%;
   padding: 0.5em 0 0.4em 0;
@@ -83,12 +100,12 @@ p:first-letter {
   height: 1.5em;
 }
 .articlePhare a:last-child,
-.ressource a:last-child {
+.ressource .buttons a:last-child {
   background-color: rgb(74, 117, 108, 0.21);
   color: #4a756c;
 }
 .articlePhare a:nth-last-child(2n),
-.ressource a:nth-last-child(2n) {
+.ressource .buttons a:nth-last-child(2n) {
   background-color: #4a756c;
   color: #eafaf6;
 }
@@ -103,10 +120,10 @@ p:first-letter {
     padding: 0;
   }
   .couvpdf img {
-    width: 30%;
+    width: 47%;
   }
-  .couvpdf img:nth-child(3) {
-    width: 30%;
+  .couvpdf a:nth-child(3) img {
+    width: 96%;
   }
 }
 
@@ -116,5 +133,12 @@ p:first-letter {
   }
   .articlePhare {
     width: 100%;
+  }
+  .imagePhare a {
+    height: 250px;
+  }
+  .imagePhare a p {
+    font-size: 2.5rem;
+    padding: 0 0.5em 0 0.5em;
   }
 }

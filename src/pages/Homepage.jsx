@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
+// import animation from '../image/animation-nocturne.jpg';
+import pdf1 from '../image/livret-pedagogique-monde-nocturne.PNG';
+import pdf2 from '../image/le-cote-obscur-des-parcs-naturels-regionaux.PNG';
+import pdf3 from '../image/kit-pratique-pour-rallumer-les-etoiles.PNG';
 
 const messageCle =
   'L’Homme étant habitué à une alternance de jour et de nuit, son cycle de sommeil est synchronisé avec le cycle de lumière et d’obscurité de la Terre. L’éclairage artificiel nocturne perturbe celui-ci et a notamment des effets sur sa santé comme la perturbation de la production des hormones, du sommeil, de la digestion, de la régénération des cellules. En matière de pollution lumineuse l’homme est principalement soumis à la lumière intrusive : une lumière non voulue qui envahie son habitat du fait de la présence d’éclairage extérieur.';
@@ -20,9 +24,27 @@ export default function Homepage() {
       <article className="ressource">
         <h2>Ressources</h2>
         <div className="couvpdf">
-          <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
-          <img src="https://via.placeholder.com/210x297?text=Couv+PDF" alt="" />
-          <img src="https://via.placeholder.com/297x210?text=Couv+PDF" alt="" />
+          <a
+            href="./livret-pedagogique-monde-nocturne.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={pdf1} alt="" />
+          </a>
+          <a
+            href="./le-cote-obscur-des-parcs-naturels-regionaux.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={pdf2} alt="" />
+          </a>
+          <a
+            href="./kit-pratique-pour-rallumer-les-etoiles.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={pdf3} alt="" />
+          </a>
         </div>
 
         <div className="buttons">
@@ -43,10 +65,14 @@ export default function Homepage() {
       <div className="articles">
         <article className="imagePhare">
           <h2>Vous avez suivi une animation ?</h2>
-          <img
-            src="https://via.placeholder.com/600x190?text=Donnez-nous+votre+avis+!"
-            alt=""
-          />
+          <a
+            href="http://geo.pnrpaca.org/"
+            title=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="avis">Donnez-nous votre avis&nbsp;!</p>
+          </a>
         </article>
 
         <article className="articlePhare">
