@@ -25,25 +25,25 @@ export default function Homepage() {
         <h2>Ressources</h2>
         <div className="couvpdf">
           <a
-            href="./livret-pedagogique-monde-nocturne.pdf"
+            href="https://john32313.github.io/api_pollution_lumineuse//ressource/livret-pedagogique-monde-nocturne.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={pdf1} alt="" />
+            <img src={pdf1} alt="pdf" />
           </a>
           <a
-            href="./le-cote-obscur-des-parcs-naturels-regionaux.pdf"
+            href="https://john32313.github.io/api_pollution_lumineuse//ressource/le-cote-obscur-des-parcs-naturels-regionaux.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={pdf2} alt="" />
+            <img src={pdf2} alt="pdf" />
           </a>
           <a
-            href="./kit-pratique-pour-rallumer-les-etoiles.pdf"
+            href="https://john32313.github.io/api_pollution_lumineuse//ressource/kit-pratique-pour-rallumer-les-etoiles.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={pdf3} alt="" />
+            <img src={pdf3} alt="pdf" />
           </a>
         </div>
 
