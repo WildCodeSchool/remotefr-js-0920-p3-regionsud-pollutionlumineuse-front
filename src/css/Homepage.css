@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.Homepage {
+  width: 80%;
+  margin: 5vh auto 5vh auto;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.ressource {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.articles {
+  width: 68%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-right: 2%;
+}
+h2 {
+  color: #4a756c;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  width: 100%;
+  font-size: 1.8rem;
+}
+p {
+  color: #666;
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+  margin: 0.5em 0 0.5em 0;
+}
+p:first-letter {
+  text-transform: capitalize;
+}
+
+
+/* ----- */
+
+.couvpdf {
+  width: 100%;
+  margin: 0.5em 0 1em 0;
+}
+.couvpdf img {
+  width: 45%;
+  margin: 1%;
+}
+.couvpdf a:nth-child(3) img {
+  width: 92%;
+}
+
+.imagePhare,
+.imagePhare p {
+  width: 100%;
+}
+.imagePhare a {
+  height: 327px;
+  background-image: url('../image/animation-nocturne.jpg');
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.imagePhare a p {
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0 0.5em 0.7em 0.5em;
+}
+
+.articlePhare {
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.buttons {
+  width: 100%;
+}
+.articlePhare a,
+.ressource .buttons a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em 0 0.4em 0;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  height: 1.5em;
+}
+.articlePhare a:last-child,
+.ressource .buttons a:last-child {
+  background-color: rgb(74, 117, 108, 0.21);
+  color: #4a756c;
+}
+.articlePhare a:nth-last-child(2n),
+.ressource .buttons a:nth-last-child(2n) {
+  background-color: #4a756c;
+  color: #eafaf6;
+}
+
+@media (max-width: 1000px) {
+  .Homepage {
+    width: 95%;
+  }
+  .ressource,
+  .articles {
+    width: 100%;
+    padding: 0;
+  }
+  .couvpdf img {
+    width: 47%;
+  }
+  .couvpdf a:nth-child(3) img {
+    width: 96%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Homepage {
+    width: 95%;
+  }
+  .articlePhare {
+    width: 100%;
+  }
+  .imagePhare a {
+    height: 250px;
+  }
+  .imagePhare a p {
+    font-size: 2.5rem;
+    padding: 0 0.5em 0 0.5em;
+  }
+}

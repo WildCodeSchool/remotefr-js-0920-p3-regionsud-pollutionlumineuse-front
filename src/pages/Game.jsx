@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import './game.css';
+import axios from 'axios';
+import '../css/game.css';
+import Loader from '../components/Loader';
 import Memo from '../components/Memo';
 import InfoMemo from '../components/InfoMemo';
 
@@ -25,6 +27,8 @@ export default function Game() {
   const [ressource, setRessource] = useState({});
   const [win, setWin] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [memoryList, setMemoryList] = useState(null);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -48,6 +52,23 @@ export default function Game() {
     })();
   }, [ressource]);
 
+  useEffect(() => {
+    (async () => {
+      const { memory } = await (
+        await axios.get(
+          'https://john32313.github.io/api_pollution_lumineuse/db.json',
+        )
+      ).data;
+      setMemoryList(memory);
+    })();
+  }, []);
+
+  if (!memoryList)
+    return (
+      <div className="game_page">
+        <Loader />
+      </div>
+    );
   return (
     <div className="game_page">
       <h2>
@@ -66,9 +87,13 @@ export default function Game() {
         )}
       </h2>
       {win === false ? (
-        <Memo changeLeftEven={setLeftEven} infoToModal={setRessource} />
+        <Memo
+          memoryList={memoryList}
+          changeLeftEven={setLeftEven}
+          infoToModal={setRessource}
+        />
       ) : (
-        <InfoMemo />
+        <InfoMemo memoryList={memoryList} />
       )}
       <Modal
         isOpen={modalIsOpen}

@@ -1,7 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
-import './Header.css';
+import '../css/Header.css';
 import { Link } from 'react-router-dom';
 
 function Header() {
