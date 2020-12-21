@@ -30,13 +30,13 @@ export default function Practical() {
       <h2>Les outils pour explorer la nuit</h2>
       <div className="photos">
         <article className="intro">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Qui dit matériel dit bien souvent technique… L’utilisation du matériel
+          va permettre aux animateurs d’animer des séquences, des « moments »
+          avec le public. Le matériel de ce kit doit vous permettre d’animer des
+          séances de découvertes, s’appuyant sur la manipulation du matériel,
+          qui vous permettront d’aborder plusieurs thèmes et enjeux liés à la
+          pollution lumineuse. Mais l’animation, c’est aussi et avant tout un
+          temps d’échange, d’écoute… surtout la nuit&nbsp;!
         </article>
         {toolList.map((t) => (
           <img
