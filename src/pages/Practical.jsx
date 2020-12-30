@@ -9,11 +9,8 @@ export default function Practical() {
   const [toolList, setToolList] = useState(null);
   useEffect(() => {
     (async () => {
-      const { tools } = await (
-        await axios.get(
-          'https://john32313.github.io/api_pollution_lumineuse/db.json',
-        )
-      ).data;
+      const { tools } = await (await axios.get(process.env.REACT_APP_URL_API))
+        .data;
       setDetail(tools[0]);
       setToolList(tools);
     })();
