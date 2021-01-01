@@ -57,9 +57,7 @@ export default function Essential() {
   useEffect(() => {
     (async () => {
       const { keymessage, keynumber } = await (
-        await axios.get(
-          'https://john32313.github.io/api_pollution_lumineuse/db.json',
-        )
+        await axios.get(process.env.REACT_APP_URL_API)
       ).data;
       setKeymessage(keymessage);
       setKeyNumber(keynumber);

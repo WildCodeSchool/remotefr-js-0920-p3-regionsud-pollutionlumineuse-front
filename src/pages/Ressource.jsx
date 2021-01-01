@@ -11,9 +11,7 @@ export default function Ressource() {
   useEffect(() => {
     (async () => {
       const { ressource } = await (
-        await axios.get(
-          'https://john32313.github.io/api_pollution_lumineuse/db.json',
-        )
+        await axios.get(process.env.REACT_APP_URL_API)
       ).data;
       setRessource(ressource);
     })();
