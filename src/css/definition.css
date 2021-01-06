@@ -18,8 +18,18 @@
   width: 60vw;
 }
 
-.definition_content img {
-  max-width: 100%;
+.definition_content p {
+  background-image: url(../image/pollution-lumineuse.jpg);
+  background-size: cover;
+  min-height: 510px;
+  width: 94%;
+  padding: 3%;
+  line-height: 1.5rem;
+  color: rgb(238, 238, 238);
+  text-shadow: 2px 2px 8px rgb(4, 8, 41), -2px -2px 8px rgb(4, 8, 41);
+  column-count: 2;
+  column-gap: 2em;
+  column-rule: 0.5px solid rgba(218, 218, 218, 0.925);
 }
 
 .def_bulle {
@@ -71,5 +81,12 @@
   }
   .definition_content {
     width: 100%;
+  }
+  .definition_content p {
+    min-height: 900px;
+    width: 84%;
+    padding: 5% 8% 0 8%;
+    background-position: top;
+    column-count: 1;
   }
 }

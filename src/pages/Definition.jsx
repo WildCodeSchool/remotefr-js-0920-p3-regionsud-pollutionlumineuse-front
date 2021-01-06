@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../css/definition.css';
-import pollutiondef from '../image/pollutiondef.jpg';
 import Loader from '../components/Loader';
 
 export default function Definition() {
@@ -67,7 +66,6 @@ const DefCont = ({ desc }) => {
   const messageCleFinal = messageCleMiseEnForme.join('.');
   return (
     <>
-      <img src={pollutiondef} alt="pollution" />
       <p dangerouslySetInnerHTML={{ __html: messageCleFinal }} />
     </>
   );
