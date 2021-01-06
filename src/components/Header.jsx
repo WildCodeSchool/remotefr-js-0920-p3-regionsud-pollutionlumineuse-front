@@ -39,7 +39,7 @@ function Header() {
           alt="Parcs Naturels Régionaux de Provence-Alpes-Côte d'Azur"
         />
 
-        <Link className="nav-homepage" to="/">
+        <Link className="nav-homepage" to="/" title="Page d'accueil">
           <h1>La Pollution Lumineuse</h1>
         </Link>
       </div>

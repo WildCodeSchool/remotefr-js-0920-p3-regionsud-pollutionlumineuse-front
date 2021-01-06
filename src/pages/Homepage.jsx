@@ -6,7 +6,7 @@ import pdf2 from '../image/le-cote-obscur-des-parcs-naturels-regionaux.PNG';
 import pdf3 from '../image/kit-pratique-pour-rallumer-les-etoiles.PNG';
 
 const messageCle =
-  'L’Homme étant habitué à une alternance de jour et de nuit, son cycle de sommeil est synchronisé avec le cycle de lumière et d’obscurité de la Terre. L’éclairage artificiel nocturne perturbe celui-ci et a notamment des effets sur sa santé comme la perturbation de la production des hormones, du sommeil, de la digestion, de la régénération des cellules. En matière de pollution lumineuse l’homme est principalement soumis à la lumière intrusive : une lumière non voulue qui envahie son habitat du fait de la présence d’éclairage extérieur.';
+  'L’éclairage artificiel nocturne affecte en particulier les animaux dans leur mobilité en provoquant deux comportements contradictoires : l’attraction ou la répulsion. Il modifie ainsi la fréquence, la temporalité ou encore le but des déplacements de la faune. Il réduit les surfaces d’habitats favorables des espèces qui fuient la lumière la nuit. Il influence ainsi la répartition de certaines espèces...';
 const messageCleMiseEnForme = messageCle.split('.');
 messageCleMiseEnForme[0] = `<strong>${messageCleMiseEnForme[0]}</strong>`;
 const messageCleFinal = messageCleMiseEnForme.join('.');
@@ -51,36 +51,45 @@ export default function Homepage() {
             Découvrir toute la documentation
           </Link>
           <a
-            href="https://www.youtube.com/"
+            href="http://sit.pnrpaca.org/pnr_regionsud-pollution-lumineuse/index.html"
             title=""
             target="_blank"
             rel="noopener noreferrer"
+            className="boutonLight"
           >
-            Voir la chaîne Youtube
+            Visualiser la carte de la pollution lumineuse
           </a>
         </div>
       </article>
 
       <div className="articles">
-        <article className="imagePhare">
-          <h2>Vous avez suivi une animation ?</h2>
-          <a
-            href="http://geo.pnrpaca.org/"
-            title=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p className="avis">Donnez-nous votre avis&nbsp;!</p>
-          </a>
-        </article>
+        <div className="imagePhare">
+          <article className="articlePhare1">
+            <h2>Envie de détente&nbsp;?</h2>
+            <a
+              href="/jeu"
+              title="Jeu de mémo sur le thème de la pollution lumineuse"
+            >
+              <p className="avis">Amusez-vous avec notre mémo thématique</p>
+            </a>
+          </article>
+          <article className="articlePhare2">
+            <h2>Vous avez suivi une animation&nbsp;?</h2>
+            <a
+              href="http://geo.pnrpaca.org/"
+              title="Questionnaire de satisfaction à propos des sorties animées"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="avis">Donnez-nous votre avis&nbsp;!</p>
+            </a>
+          </article>
+        </div>
 
         <article className="articlePhare">
-          <h2>La nuit et la santé humaine</h2>
+          <h2>La nuit et la faune</h2>
           <p dangerouslySetInnerHTML={{ __html: messageCleFinal }} />
           <div className="buttons">
-            <Link to="/mot-message-cle" title="">
-              Lire la suite
-            </Link>
             <Link to="/mot-message-cle" title="">
               Voir tous les messages-clés
             </Link>
@@ -88,12 +97,9 @@ export default function Homepage() {
         </article>
 
         <article className="articlePhare">
-          <h2>Eclairage artificiel : qu’est-ce que c’est ?</h2>
+          <h2>Eclairage artificiel : qu’est-ce que c’est&nbsp;?</h2>
           <p dangerouslySetInnerHTML={{ __html: definitionModif }} />
           <div className="buttons">
-            <Link to="/definition" title="">
-              Lire la suite
-            </Link>
             <Link to="/definition" title="">
               Voir toutes les définitions
             </Link>
