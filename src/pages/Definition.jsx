@@ -41,7 +41,7 @@ export default function Definition() {
           ))}
         </section>
         <section className="definition_content">
-          <DefCont desc={defShow.description} />
+          <DefCont desc={defShow.description} title={defShow.title} />
         </section>
       </main>
     </div>
@@ -60,12 +60,13 @@ const DefBulle = ({ title, id, changeDefinition }) => (
   </div>
 );
 
-const DefCont = ({ desc }) => {
+const DefCont = ({ desc, title }) => {
   const messageCleMiseEnForme = desc.split('.');
   messageCleMiseEnForme[0] = `<strong>${messageCleMiseEnForme[0]}</strong>`;
   const messageCleFinal = messageCleMiseEnForme.join('.');
   return (
     <>
+      <h3>{title}</h3>
       <p dangerouslySetInnerHTML={{ __html: messageCleFinal }} />
     </>
   );
