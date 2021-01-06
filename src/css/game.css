@@ -82,3 +82,18 @@
 .buttonMemo:focus {
   outline: none;
 }
+
+.close_modal {
+  color: #4a756c;
+  font-size : 1.2rem;
+  cursor: pointer;
+  align-self: end;
+  background: none;
+  border: none;
+}
+
+.modal_header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}

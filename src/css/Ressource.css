@@ -76,6 +76,18 @@
   background-color: #925619;
 }
 
+.Ressource .video a {
+  background-color: #b72055;
+}
+
+.Ressource .video a:nth-child(n) {
+  background-color: #b72055;
+}
+
+.Ressource .video a:nth-child(2n) {
+  background-color: #9c1c49;
+}
+
 .Ressource .documentations a:nth-child(2n) {
   background-color: #6b998e;
 }

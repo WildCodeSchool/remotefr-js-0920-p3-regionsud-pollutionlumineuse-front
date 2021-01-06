@@ -8,17 +8,20 @@ export default function Ressource() {
   const [showPro, setShowPro] = useState(false);
   const [ressourceListDdl, setRessourceDdl] = useState(null);
   const [ressourceListLink, setRessourceLink] = useState(null);
+  const [ressourceListVideo, setRessourceVideo] = useState(null);
 
   useEffect(() => {
     (async () => {
       const ressourceddl = await (await axios.get('/ressource-downloads')).data;
       const ressourcelink = await (await axios.get('/ressource-links')).data;
+      const ressourcevideo = await (await axios.get('/ressource-videos')).data;
       setRessourceLink(ressourcelink);
       setRessourceDdl(ressourceddl);
+      setRessourceVideo(ressourcevideo);
     })();
   }, []);
 
-  if (!ressourceListDdl || !ressourceListLink)
+  if (!ressourceListDdl || !ressourceListLink || !ressourceListVideo)
     return (
       <div className="Ressource">
         <h2>Ressources</h2>
@@ -44,7 +47,27 @@ export default function Ressource() {
       <article className="documentations">
         {ressourceListDdl.map((card) =>
           !showPro ? (
-            card.professional === true && (
+            !card.professional && (
+              <SingleRessource
+                key={card.id}
+                url={`${process.env.REACT_APP_URL_API}${card.url.url}`}
+                title={card.title}
+              />
+            )
+          ) : (
+            <SingleRessource
+              key={card.id}
+              url={`${process.env.REACT_APP_URL_API}${card.url.url}`}
+              title={card.title}
+            />
+          ),
+        )}
+      </article>
+      <h3>Sites à consulter</h3>
+      <article className="sites">
+        {ressourceListLink.map((card) =>
+          !showPro ? (
+            !card.professional && (
               <SingleRessource
                 key={card.id}
                 url={card.url}
@@ -56,11 +79,11 @@ export default function Ressource() {
           ),
         )}
       </article>
-      <h3>Sites à consulter</h3>
-      <article className="sites">
-        {ressourceListLink.map((card) =>
+      <h3>Vidéos</h3>
+      <article className="sites video">
+        {ressourceListVideo.map((card) =>
           !showPro ? (
-            card.professional === true && (
+            !card.professional && (
               <SingleRessource
                 key={card.id}
                 url={card.url}

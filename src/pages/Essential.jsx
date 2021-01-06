@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
 import '../css/essential.css';
 import backgroundArticle from './background_article.jpg';
@@ -155,12 +156,6 @@ const ButtonKeyMessage = ({ id, title, handleClickKeyButton, active }) => (
 );
 
 const ArticleKeyMessage = ({ imgBackground, title, description }) => {
-  let descc;
-  if (description) {
-    const desc = description.split('.');
-    desc[0] = `<strong>${desc[0]}</strong>`;
-    descc = desc.join('.');
-  }
   return (
     <>
       <div className="image_article">
@@ -169,13 +164,14 @@ const ArticleKeyMessage = ({ imgBackground, title, description }) => {
           alt="article_image"
           src={imgBackground}
         />
-        <h2>{title}</h2>
+        <h2>
+          <ReactMarkdown>{title}</ReactMarkdown>
+        </h2>
         <p>PNR des Baronnies Provençales</p>
       </div>
-      <div
-        className="text_article"
-        dangerouslySetInnerHTML={{ __html: descc }}
-      />
+      <div className="text_article">
+        <ReactMarkdown>{description}</ReactMarkdown>
+      </div>
     </>
   );
 };

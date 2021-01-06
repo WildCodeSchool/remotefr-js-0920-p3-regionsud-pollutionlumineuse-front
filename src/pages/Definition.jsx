@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-// eslint-disable no-nested-ternary
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../css/definition.css';

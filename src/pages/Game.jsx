@@ -93,19 +93,21 @@ export default function Game() {
         <InfoMemo memoryList={memoryList} />
       )}
       <Modal
-        isOpen={!modalIsOpen}
+        isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <span
-          className="iconify"
-          data-icon="emojione-monotone:cross-mark"
-          data-inline="false"
-          onClick={closeModal}
-        />
-        <h2 style={{ fontFamily: 'Oswald' }}>{ressource.title}</h2>
-
+        <div className="modal_header">
+          <button className="close_modal" type="button" onClick={closeModal}>
+            <span
+              className="iconify"
+              data-icon="emojione-monotone:cross-mark"
+              data-inline="false"
+            />
+          </button>
+          <h2 style={{ fontFamily: 'Oswald' }}>{ressource.title}</h2>
+        </div>
         <div>{ressource.description}</div>
       </Modal>
     </div>
