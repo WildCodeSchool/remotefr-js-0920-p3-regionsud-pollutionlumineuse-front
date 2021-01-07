@@ -28,7 +28,7 @@
 .Ressource .documentations a,
 .Ressource .sites a {
   background-color: #4a756c;
-  background-image: url('http://geo.pnrpaca.org/wp-content/themes/pnrpaca/images/topographic-map-pattern.png');
+  background-image: url("../image/topographic-map-pattern.png");
   text-decoration: none;
   color: #fff;
   display: flex;

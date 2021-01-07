@@ -164,9 +164,7 @@ const ArticleKeyMessage = ({ imgBackground, title, description }) => {
           alt="article_image"
           src={imgBackground}
         />
-        <h2>
-          <ReactMarkdown>{title}</ReactMarkdown>
-        </h2>
+        <h2>{title}</h2>
         <p>PNR des Baronnies Provençales</p>
       </div>
       <div className="text_article">
