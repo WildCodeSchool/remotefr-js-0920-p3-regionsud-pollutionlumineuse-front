@@ -9,8 +9,7 @@ export default function Practical() {
   const [toolList, setToolList] = useState(null);
   useEffect(() => {
     (async () => {
-      const { tools } = await (await axios.get(process.env.REACT_APP_URL_API))
-        .data;
+      const tools = await (await axios.get('/tools')).data;
       setDetail(tools[0]);
       setToolList(tools);
     })();
@@ -24,7 +23,7 @@ export default function Practical() {
     );
   return (
     <div className="Practical">
-      <h2>Les outils pour explorer la nuit</h2>
+      <h2>Quelques outils pour explorer la nuit</h2>
       <div className="photos">
         <article className="intro">
           Qui dit matériel dit bien souvent technique… L’utilisation du matériel
@@ -35,26 +34,42 @@ export default function Practical() {
           pollution lumineuse. Mais l’animation, c’est aussi et avant tout un
           temps d’échange, d’écoute… surtout la nuit&nbsp;!
         </article>
-        {toolList.map((t) => (
-          <img
-            id={t.id}
-            key={t.id}
-            src={t.image}
-            alt={t.title}
-            onKeyPress={(e) => {
-              setDetail(toolList.find((u) => u.id === Number(e.target.id)));
-            }}
-            onClick={(e) => {
-              setDetail(toolList.find((u) => u.id === Number(e.target.id)));
-            }}
-          />
-        ))}
+        {toolList.map((t) =>
+          t.id === detail.id ? (
+            <img
+              id={t.id}
+              key={t.id}
+              src={`${process.env.REACT_APP_URL_API}${t.image.url}`}
+              alt={t.title}
+              style={{ opacity: '0.4' }}
+              onKeyPress={(e) => {
+                setDetail(toolList.find((u) => u.id === Number(e.target.id)));
+              }}
+              onClick={(e) => {
+                setDetail(toolList.find((u) => u.id === Number(e.target.id)));
+              }}
+            />
+          ) : (
+            <img
+              id={t.id}
+              key={t.id}
+              src={`${process.env.REACT_APP_URL_API}${t.image.url}`}
+              alt={t.title}
+              onKeyPress={(e) => {
+                setDetail(toolList.find((u) => u.id === Number(e.target.id)));
+              }}
+              onClick={(e) => {
+                setDetail(toolList.find((u) => u.id === Number(e.target.id)));
+              }}
+            />
+          ),
+        )}
       </div>
       <PracticalDescription
         title={detail.title}
         description={detail.description}
         utility={detail.utility}
-        image={detail.image}
+        image={`${process.env.REACT_APP_URL_API}${detail.image.url}`}
       />
     </div>
   );

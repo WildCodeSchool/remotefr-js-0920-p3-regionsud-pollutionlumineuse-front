@@ -8,7 +8,7 @@ export default function InfoMemo({ memoryList }) {
         <CardInfo
           key={m.id}
           title={m.title}
-          image={m.image}
+          image={`${process.env.REACT_APP_URL_API}${m.image.url}`}
           description={m.description}
         />
       ))}

@@ -19,6 +19,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     fontFamily: 'Lato',
+    width: '60%',
   },
 };
 Modal.setAppElement('#root');
@@ -54,8 +55,7 @@ export default function Game() {
 
   useEffect(() => {
     (async () => {
-      const { memory } = await (await axios.get(process.env.REACT_APP_URL_API))
-        .data;
+      const memory = await (await axios.get('/memories')).data;
       setMemoryList(memory);
     })();
   }, []);
@@ -98,11 +98,16 @@ export default function Game() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <button className="buttonMemo" type="button" onClick={closeModal}>
-          Fermer
-        </button>
-        <h2 style={{ fontFamily: 'Oswald' }}>{ressource.title}</h2>
-
+        <div className="modal_header">
+          <button className="close_modal" type="button" onClick={closeModal}>
+            <span
+              className="iconify"
+              data-icon="emojione-monotone:cross-mark"
+              data-inline="false"
+            />
+          </button>
+          <h2 style={{ fontFamily: 'Oswald' }}>{ressource.title}</h2>
+        </div>
         <div>{ressource.description}</div>
       </Modal>
     </div>

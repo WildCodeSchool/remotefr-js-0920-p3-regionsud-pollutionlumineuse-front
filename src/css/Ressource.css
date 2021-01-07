@@ -28,7 +28,7 @@
 .Ressource .documentations a,
 .Ressource .sites a {
   background-color: #4a756c;
-  background-image: url('http://geo.pnrpaca.org/wp-content/themes/pnrpaca/images/topographic-map-pattern.png');
+  background-image: url("../image/topographic-map-pattern.png");
   text-decoration: none;
   color: #fff;
   display: flex;
@@ -74,6 +74,18 @@
 }
 .Ressource .sites a:nth-child(3n) {
   background-color: #925619;
+}
+
+.Ressource .video a {
+  background-color: #b72055;
+}
+
+.Ressource .video a:nth-child(n) {
+  background-color: #b72055;
+}
+
+.Ressource .video a:nth-child(2n) {
+  background-color: #9c1c49;
 }
 
 .Ressource .documentations a:nth-child(2n) {

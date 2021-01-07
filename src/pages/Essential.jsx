@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
 import '../css/essential.css';
 import backgroundArticle from './background_article.jpg';
@@ -56,9 +57,8 @@ export default function Essential() {
 
   useEffect(() => {
     (async () => {
-      const { keymessage, keynumber } = await (
-        await axios.get(process.env.REACT_APP_URL_API)
-      ).data;
+      const keymessage = await (await axios.get('/keymessages')).data;
+      const keynumber = await (await axios.get('/keynumbers')).data;
       setKeymessage(keymessage);
       setKeyNumber(keynumber);
       setKeyNumberRand(generateRandomTab2Key(0, keynumber.length - 1));
@@ -103,18 +103,28 @@ export default function Essential() {
               )}
           </div>
         </aside>
-
         <article className="keymessage_bloc">
           <h2>Messages - clés</h2>
           <div className="button_keymessage_bloc">
-            {keyMessage.map((k) => (
-              <ButtonKeyMessage
-                handleClickKeyButton={(id) => setActiveIdMessage(id)}
-                key={k.id}
-                id={k.id}
-                title={k.title}
-              />
-            ))}
+            {keyMessage.map((k) =>
+              k.id === messageKey.id ? (
+                <ButtonKeyMessage
+                  handleClickKeyButton={(id) => setActiveIdMessage(id)}
+                  key={k.id}
+                  id={k.id}
+                  title={k.title}
+                  active
+                />
+              ) : (
+                <ButtonKeyMessage
+                  handleClickKeyButton={(id) => setActiveIdMessage(id)}
+                  key={k.id}
+                  id={k.id}
+                  title={k.title}
+                  active={false}
+                />
+              ),
+            )}
           </div>
           <div className="article_bloc">
             {messageKey !== {} && (
@@ -131,23 +141,21 @@ export default function Essential() {
   );
 }
 
-const ButtonKeyMessage = ({ id, title, handleClickKeyButton }) => (
+const ButtonKeyMessage = ({ id, title, handleClickKeyButton, active }) => (
   <button
     onClick={() => handleClickKeyButton(id)}
     type="button"
-    className="button_keyMessage_title"
+    className={
+      active
+        ? 'active_button_keyMessage_title button_keyMessage_title'
+        : 'button_keyMessage_title'
+    }
   >
     {title}
   </button>
 );
 
 const ArticleKeyMessage = ({ imgBackground, title, description }) => {
-  let descc;
-  if (description) {
-    const desc = description.split('.');
-    desc[0] = `<strong>${desc[0]}</strong>`;
-    descc = desc.join('.');
-  }
   return (
     <>
       <div className="image_article">
@@ -157,11 +165,11 @@ const ArticleKeyMessage = ({ imgBackground, title, description }) => {
           src={imgBackground}
         />
         <h2>{title}</h2>
+        <p>PNR des Baronnies Provençales</p>
       </div>
-      <div
-        className="text_article"
-        dangerouslySetInnerHTML={{ __html: descc }}
-      />
+      <div className="text_article">
+        <ReactMarkdown>{description}</ReactMarkdown>
+      </div>
     </>
   );
 };

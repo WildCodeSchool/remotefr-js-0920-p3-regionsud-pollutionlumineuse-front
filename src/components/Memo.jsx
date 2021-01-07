@@ -60,7 +60,11 @@ export default function Memo({ memoryList, changeLeftEven, infoToModal }) {
   return (
     <div className="game_bloc">
       {memoryList.concat(memoryList).map((card, itt) => (
-        <MemoryCard image={card.image} id={card.id} key={itt} />
+        <MemoryCard
+          image={`${process.env.REACT_APP_URL_API}${card.image.url}`}
+          id={card.id}
+          key={itt}
+        />
       ))}
     </div>
   );

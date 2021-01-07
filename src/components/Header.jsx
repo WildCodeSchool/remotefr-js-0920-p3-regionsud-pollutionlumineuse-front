@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '../css/Header.css';
 import { Link } from 'react-router-dom';
+import image from '../image/logo-PNR-PACA.PNG';
 
 function Header() {
   useEffect(() => {
@@ -34,12 +35,12 @@ function Header() {
     <div className="header">
       <div className="header_brand">
         <img
-          src="https://www.pnr-queyras.fr/ecmedias/2020/05/tampon-PNR-PACA.jpg"
+          src={image}
           className="logoRegionSud"
           alt="Parcs Naturels Régionaux de Provence-Alpes-Côte d'Azur"
         />
 
-        <Link className="nav-homepage" to="/">
+        <Link className="nav-homepage" to="/" title="Page d'accueil">
           <h1>La Pollution Lumineuse</h1>
         </Link>
       </div>
