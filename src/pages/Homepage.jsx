@@ -24,21 +24,21 @@ export default function Homepage() {
         <h2>Ressources</h2>
         <div className="couvpdf">
           <a
-            href="https://john32313.github.io/api_pollution_lumineuse//ressource/livret-pedagogique-monde-nocturne.pdf"
+            href={`${process.env.REACT_APP_URL_API}/uploads/kit_pratique_pour_rallumer_les_etoiles_91ad7ce8eb.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={pdf1} alt="pdf" />
           </a>
           <a
-            href="https://john32313.github.io/api_pollution_lumineuse//ressource/le-cote-obscur-des-parcs-naturels-regionaux.pdf"
+            href={`${process.env.REACT_APP_URL_API}/uploads/le_cote_obscur_des_parcs_naturels_regionaux_8f61bcd1a5.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={pdf2} alt="pdf" />
           </a>
           <a
-            href="https://john32313.github.io/api_pollution_lumineuse//ressource/kit-pratique-pour-rallumer-les-etoiles.pdf"
+            href={`${process.env.REACT_APP_URL_API}/uploads/kit_pratique_pour_rallumer_les_etoiles_91ad7ce8eb.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -76,7 +76,7 @@ export default function Homepage() {
           <article className="articlePhare2">
             <h2>Vous avez suivi une animation&nbsp;?</h2>
             <a
-              href="http://geo.pnrpaca.org/"
+              href={process.env.REACT_APP_URL_FORMULAIRE}
               title="Questionnaire de satisfaction à propos des sorties animées"
               target="_blank"
               rel="noopener noreferrer"
