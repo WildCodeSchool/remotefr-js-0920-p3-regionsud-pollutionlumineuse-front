@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
 import '../css/essential.css';
-import backgroundArticle from './background_article.jpg';
+import backgroundArticle from '../image/background_article_essentiel.jpg';
 import Loader from '../components/Loader';
 
 function generateRandomTab2Key(min, max) {
@@ -165,7 +165,7 @@ const ArticleKeyMessage = ({ imgBackground, title, description }) => {
           src={imgBackground}
         />
         <h2>{title}</h2>
-        <p>PNR des Baronnies Provençales</p>
+        <p>PNR du Mont-Ventoux - Lenny Vidal</p>
       </div>
       <div className="text_article">
         <ReactMarkdown>{description}</ReactMarkdown>
