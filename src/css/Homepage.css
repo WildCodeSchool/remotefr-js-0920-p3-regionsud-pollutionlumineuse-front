@@ -75,6 +75,8 @@ p:first-letter {
   margin-right: 1%;
   height: 400px;
   background-image: url('../image/jeu-pollution-lumineuse.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-decoration: none;
   display: flex;
   align-items: flex-end;
@@ -85,6 +87,8 @@ p:first-letter {
   margin-left: 1%;
   height: 400px;
   background-image: url('../image/animation-nocturne.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-decoration: none;
   display: flex;
   align-items: flex-end;
