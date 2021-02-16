@@ -21,11 +21,11 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path="/mot-message-cle" component={Essential} />
-          <Route path="/definition" component={Definition} />
+          <Route path="/l-essentiel" component={Essential} />
+          <Route path="/definitions" component={Definition} />
           <Route path="/pratique" component={Practical} />
-          <Route path="/jeu" component={Game} />
-          <Route path="/ressource" component={Ressource} />
+          <Route path="/jeu-memo" component={Game} />
+          <Route path="/ressources" component={Ressource} />
         </Switch>
 
         <Footer />

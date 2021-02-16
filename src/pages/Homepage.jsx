@@ -24,7 +24,7 @@ export default function Homepage() {
         <h2>Ressources</h2>
         <div className="couvpdf">
           <a
-            href={`${process.env.REACT_APP_URL_API}/uploads/kit_pratique_pour_rallumer_les_etoiles_91ad7ce8eb.pdf`}
+            href={`${process.env.REACT_APP_URL_API}/uploads/livret_pedagogique_monde_nocturne_462d865866.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,8 +47,8 @@ export default function Homepage() {
         </div>
 
         <div className="buttons">
-          <Link to="/ressource" title="">
-            Découvrir toute la documentation
+          <Link to="/ressources" title="">
+            Découvrir les <strong>ressources</strong> documentaires
           </Link>
           <a
             href="http://sit.pnrpaca.org/pnr_regionsud-pollution-lumineuse/index.html"
@@ -67,10 +67,12 @@ export default function Homepage() {
           <article className="articlePhare1">
             <h2>Envie de détente&nbsp;?</h2>
             <a
-              href="/jeu"
+              href="/jeu-memo"
               title="Jeu de mémo sur le thème de la pollution lumineuse"
             >
-              <p className="avis">Amusez-vous avec notre mémo thématique</p>
+              <p className="avis">
+                <strong>Jouer</strong> avec notre mémo thématique
+              </p>
             </a>
           </article>
           <article className="articlePhare2">
@@ -81,7 +83,7 @@ export default function Homepage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="avis">Donnez-nous votre avis&nbsp;!</p>
+              <p className="avis">Nous donner votre avis</p>
             </a>
           </article>
         </div>
@@ -90,8 +92,8 @@ export default function Homepage() {
           <h2>La nuit et la faune</h2>
           <p dangerouslySetInnerHTML={{ __html: messageCleFinal }} />
           <div className="buttons">
-            <Link to="/mot-message-cle" title="">
-              Voir tous les messages-clés
+            <Link to="/l-essentiel" title="">
+              Voir <strong>l&#39;essentiel</strong> : chiffres et messages-clés
             </Link>
           </div>
         </article>
@@ -100,8 +102,8 @@ export default function Homepage() {
           <h2>Eclairage artificiel : qu’est-ce que c’est&nbsp;?</h2>
           <p dangerouslySetInnerHTML={{ __html: definitionModif }} />
           <div className="buttons">
-            <Link to="/definition" title="">
-              Voir toutes les définitions
+            <Link to="/definitions" title="">
+              Voir les <strong>définitions</strong>
             </Link>
           </div>
         </article>
