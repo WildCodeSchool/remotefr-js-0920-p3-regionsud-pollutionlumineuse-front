@@ -12,10 +12,12 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+const routerBasename = process.env.REACT_APP_ROUTER_BASENAME || '/';
+
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={routerBasename}>
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
