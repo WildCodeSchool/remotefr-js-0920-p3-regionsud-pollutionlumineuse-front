@@ -58,19 +58,19 @@ function Header() {
           <Link to="/">Accueil</Link>
         </li>
         <li>
-          <Link to="/mot-message-cle">L'essentiel</Link>
+          <Link to="/l-essentiel">L'essentiel</Link>
         </li>
         <li>
-          <Link to="/definition">Définitions</Link>
+          <Link to="/definitions">Définitions</Link>
         </li>
         <li>
           <Link to="/pratique">Les outils</Link>
         </li>
         <li>
-          <Link to="/jeu">Jouer</Link>
+          <Link to="/jeu-memo">Jouer</Link>
         </li>
         <li>
-          <Link to="/ressource">Ressources</Link>
+          <Link to="/ressources">Ressources</Link>
         </li>
       </ul>
     </div>
