@@ -22,10 +22,23 @@
     "no-console": "warn",
     "no-debugger": "warn",
     "react/jsx-filename-extension": "warn",
-    "react/no-unescaped-entities": "warn",
-    "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-curly-newline": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-unescaped-entities" : "off",
+    "jsx-a11y/label-has-associated-control" : "off",
+    "react/prop-types" : "off",
+    "react/no-array-index-key" : "off",
+    "react/no-this-in-sfc" : "off",
+    "no-param-reassign" : "off",
+    "no-use-before-define" : "off",
+    "no-lonely-if" : "off",
+    "jsx-a11y/no-noninteractive-element-interactions" : "off",
+    "react/no-danger" : "off",
+    "no-nested-ternary" : "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-no-target-blank": "off",
+    "react-hooks/exhaustive-deps": "off"
   }
 }

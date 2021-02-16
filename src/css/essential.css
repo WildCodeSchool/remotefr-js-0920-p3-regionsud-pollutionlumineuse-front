@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.essential h2,
+.essential h1 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.essential button:hover {
+  filter: brightness(130%);
+  -webkit-filter: brightness(130%);
+  -moz-filter: brightness(130%);
+  -o-filter: brightness(130%);
+  -ms-filter: brightness(130%);
+}
+
+.button_keyMessage_title {
+  background-color: #4a756c7c;
+
+  font-family: 'Oswald', sans-serif;
+  border: 0;
+  padding: 0.5% 2%;
+  color: black;
+  font-size: 1.2em;
+  margin: 0.5%;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.button_keyMessage_title:focus {
+  outline: none;
+}
+
+.active_button_keyMessage_title {
+  background-color: #4a756d;
+  color: #d7e0df;
+}
+
+.essential_bloc {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.essential_bloc h2 {
+  text-align: left;
+}
+
+.keynumber_bloc {
+  width: 30%;
+  text-align: left;
+  max-height: 70%;
+}
+
+.keymessage_bloc {
+  width: 60%;
+  text-align: left;
+}
+
+.button_keymessage_bloc {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_article {
+  background-color: #dae3e0;
+  padding: 2%;
+  color: black;
+  text-align: justify;
+  font-family: 'Lato', sans-serif;
+}
+
+.image_article {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image_article h2 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #d7e0df;
+  text-shadow: 2px 2px 8px rgb(4, 8, 41), -2px -2px 8px rgb(4, 8, 41);
+}
+
+.image_article p {
+  position: absolute;
+  bottom: 0rem;
+  right: 1rem;
+  color: #d7e0df;
+  text-shadow: 2px 2px 8px rgb(4, 8, 41), -2px -2px 8px rgb(4, 8, 41);
+}
+
+.essential {
+  color: #4a756d;
+  min-height: 77vh;
+}
+
+.essential ul li {
+  color: #666666;
+}
+
+.keynumber_details {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.keynumber_bulle {
+  background-color: #dae3e0;
+  margin: 5% 0;
+  padding: 5% 10%;
+  border-radius: 55px;
+  width: 250px;
+
+  font-family: 'Lato', sans-serif;
+}
+
+.keymessage_bulle_right {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 920px) {
+  .essential_bloc {
+    flex-direction: column;
+    align-items: center;
+  }
+  .keymessage_bloc {
+    width: 80%;
+  }
+  .keynumber_bloc {
+    width: 80%;
+  }
+  .keynumber_bloc h2 {
+    text-align: center;
+  }
+}
+
+.keyNumberRed {
+  color: rgb(209, 66, 66);
+  font-weight: bolder;
+  font-size: 1.5em;
+}
