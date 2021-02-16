@@ -8,7 +8,7 @@
   text-align: center;
 }
 
-.essential button:hover {
+.essential button:not(:disabled):hover {
   filter: brightness(130%);
   -webkit-filter: brightness(130%);
   -moz-filter: brightness(130%);
@@ -74,6 +74,13 @@
   font-family: 'Lato', sans-serif;
 }
 
+.text_article p {
+  color: #3e635c;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
 .image_article {
   width: 100%;
   height: 25vh;
@@ -113,17 +120,58 @@
 }
 
 .keynumber_bulle {
-  background-color: #dae3e0;
+  background-color: #dde5e3;
+  color: #3e635c;
   margin: 5% 0;
-  padding: 5% 10%;
-  border-radius: 55px;
-  width: 250px;
-
+  padding: 1.5em 2em;
+  border-radius: 25px;
+  min-width: 230px;
+  max-width: 450px;
+  width: 55%;
+  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
+.keynumber_nav {
+  margin: 1.5em 0 0 2em;
+  display: flex;
+  align-items: center;
+}
+
+.keynumber_nav button {
+  background: transparent;
+  border: transparent;
+  border-radius: 50%;
+  padding: 0;
+  color: #4a756c7c;
+}
+
+.keynumber_nav button:disabled {
+  color: #dde5e3;
+}
+
+.keynumber_nav [class^="icon-"] {
+  padding: 0 0.125em;
+}
+
+.keynumber_nav .icon-arrow-left {
+  margin-right: 0.5em;
+}
+
+.keynumber_nav .icon-arrow-right {
+  margin-left: 0.5em;
+}
+
+.keynumber_nav button.active {
+  color: rgb(209, 66, 66);
+}
+
+.keynumber_nav button:focus {
+  outline: none;
+}
+
 .keymessage_bulle_right {
-  margin: 0 auto;
+  margin: 0 10% 0 auto;
 }
 
 @media screen and (max-width: 920px) {

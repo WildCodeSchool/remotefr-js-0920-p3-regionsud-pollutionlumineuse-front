@@ -5,9 +5,15 @@ import '../css/essential.css';
 import backgroundArticle from '../image/background_article_essentiel.jpg';
 import Loader from '../components/Loader';
 
-function generateRandomTab2Key(min, max) {
-  const num = Math.floor(Math.random() * max);
-  return num === max ? [num, min] : [num, num + 1];
+// Number of key messages per page
+const NPP = 2;
+
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 function colorNumberInText(chaine) {
@@ -53,15 +59,18 @@ export default function Essential() {
   const [messageKey, setMessageKey] = useState({});
   const [keyMessage, setKeymessage] = useState(null);
   const [keyNumber, setKeyNumber] = useState(null);
-  const [keyNumberRand, setKeyNumberRand] = useState([]);
+  const [keyNumberIndex, setKeyNumberIndex] = useState(0);
+  const [keyNumberPages, setKeyNumberPages] = useState(0);
+  // const [keyNumberRand, setKeyNumberRand] = useState([]);
 
   useEffect(() => {
     (async () => {
       const keymessage = await (await axios.get('/keymessages')).data;
       const keynumber = await (await axios.get('/keynumbers')).data;
       setKeymessage(keymessage);
-      setKeyNumber(keynumber);
-      setKeyNumberRand(generateRandomTab2Key(0, keynumber.length - 1));
+      setKeyNumber(shuffle(keynumber));
+      // setKeyNumberRand(generateRandomTab2Key(0, keynumber.length - 1));
+      setKeyNumberPages(Math.ceil(keynumber.length / NPP));
       setMessageKey(keymessage[0]);
     })();
   }, []);
@@ -84,23 +93,57 @@ export default function Essential() {
       <h2>L'essentiel</h2>
       <section className="essential_bloc">
         <aside className="keynumber_bloc">
-          <h2>Chiffres-clés</h2>
-          <div className="keynumber_details">
-            {keyNumberRand.length !== 0 &&
-              keyNumberRand.map((k, itt) =>
-                itt === 1 ? (
-                  <KeyMessageBulle
-                    align="keymessage_bulle_right"
-                    key={keyNumber[k].id}
-                    text={keyNumber[k].text}
-                  />
-                ) : (
-                  <KeyMessageBulle
-                    key={keyNumber[k].id}
-                    text={keyNumber[k].text}
-                  />
-                ),
+          <div className="keynumber_header">
+            <h2>Chiffres-clés</h2>
+            <span className="keynumber_nav">
+              {keyNumberPages > 0 && (
+                <>
+                  <button
+                    type="button"
+                    disabled={keyNumberIndex === 0}
+                    onClick={() => setKeyNumberIndex((pi) => pi - 1)}
+                  >
+                    <span className="icon-arrow-left" />
+                  </button>
+                  {new Array(keyNumberPages).fill(0).map((_, i) => (
+                    <button
+                      type="button"
+                      className={
+                        i === keyNumberIndex
+                          ? 'kn_nav_bullet active'
+                          : 'kn_nav_bullet'
+                      }
+                      onClick={() => setKeyNumberIndex(i)}
+                    >
+                      <span className="icon-circle" />
+                    </button>
+                  ))}
+                  <button
+                    type="button"
+                    disabled={keyNumberIndex === keyNumberPages - 1}
+                    onClick={() => setKeyNumberIndex((pi) => pi + 1)}
+                  >
+                    <span className="icon-arrow-right" />
+                  </button>
+                </>
               )}
+            </span>
+          </div>
+          <div className="keynumber_details">
+            {keyNumber.length > 0 &&
+              keyNumber
+                .slice(keyNumberIndex * NPP, (keyNumberIndex + 1) * NPP)
+                .map((kn, itt) =>
+                  itt === 1 ? (
+                    <KeyMessageBulle
+                      align="keymessage_bulle_right"
+                      key={kn.id}
+                      text={kn.text}
+                    />
+                  ) : (
+                    <KeyMessageBulle key={kn.id} text={kn.text} />
+                  ),
+                )}
           </div>
         </aside>
         <article className="keymessage_bloc">
