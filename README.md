@@ -102,11 +102,23 @@ Une fois configurée, l'application peut être lancée, toujours depuis un termi
 
 On peut tester le "build" (génération de l'application finale destinée à être déployée) en local, via `nom run build`.
 
+### Développement
+
+Ce projet a été démarré à partir d'un [template](https://github.com/bhubr/react-eslint-prettier-template), généré via [Create React App](https://create-react-app.dev/) puis augmenté :
+
+* [ESLint](https://eslint.org/), le *linter* JavaScript de référence, est configuré avec les conventions de codage Airbnb pour [JavaScript](https://github.com/airbnb/javascript) et [React](https://github.com/airbnb/javascript/tree/master/react).
+* [Prettier](https://prettier.io/) est installé, et la configuration ESLint est adaptée, pour éviter les conflits entre les conventions Airbnb et celles propres à Prettier.
+* Pour bénéficier d'ESLint et Prettier dans Visual Studio Code, il est recommandé d'installer les extensions correspondantes :
+
+    * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* Un "hook de pré-commit" Git a été mis en place, pour lancer ESLint et Prettier sur tous les fichiers ajoutés à l'index. Si des erreurs ESLint sont présentes, le commit sera empêché. Ce sytème repose sur [Husky](https://github.com/typicode/husky), outil de l'écosystème NPM qui permet de faciliter la mise en place de hooks Git.
+
 ## Déploiement
 
-À nouveau, la procédure à suivre pour un déploiement complet (applications serveur et cliente) est documentée sur le dépôt de l'application serveur.
+On le répète, la procédure à suivre pour un déploiement complet (applications serveur et cliente) est documentée sur le dépôt de l'application serveur.
 
-D'autres options existent :
+D'autres options existent, pour déployer spécifiquement cette application cliente :
 
 * [Netlify](https://app.netlify.com/), qui permet de déployer facilement des applications front-end
 * [Vercel](https://vercel.com/), qui fournit un service similaire
